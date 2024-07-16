@@ -1,0 +1,15 @@
+#square {
+    width: 300px;
+    height: 300px;
+}
+
+#diary {
+    width: 300px;
+    height: 200px;
+}
+
+body {
+    width: 900px;
+    height: 900px;
+    margin: auto;
+}
