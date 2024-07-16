@@ -133,17 +133,17 @@ const isAuthenticated = (req, res, next) => {
   res.redirect("/login");
 };
 
-app.get("/account2", isAuthenticated, async (req, res) => {
-  console.log("debug1")
-  db.find({ username: req.session.username }, async (err, users) => {
-    if (users.length === 0) {
-      res.send({ isLogged: false });
-    } else {
-      res.send({ isLoggedIn: true, userData: users[0] });
-      // res.redirect("/account");
-    }
-  })
-})
+// app.get("/account2", isAuthenticated, async (req, res) => {
+//   console.log("debug1")
+//   db.find({ username: req.session.username }, async (err, users) => {
+//     if (users.length === 0) {
+//       res.send({ isLogged: false });
+//     } else {
+//       res.send({ isLoggedIn: true, userData: users[0] });
+//       // res.redirect("/account");
+//     }
+//   })
+// })
 
 app.get("/account", isAuthenticated, (req, res) => {
 
